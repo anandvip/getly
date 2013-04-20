@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width" />
+<title>My Next Car</title>
+<meta name="description" content="getElementById demo tutorial from Mahajan Computers, Designed and styled by Anandvip.com">
+<meta name="author" content="anandvip@gmail.com">
+<!--<script src="//code.jquery.com/jquery.min.js"></script>-->
+<link rel="stylesheet" href="car.css"><!--simple css animation library-->
+<script type="text/javascript" src="car.js"></script>
+<style>
+body{
+  
+	font-family:Arial, Helvetica, sans-serif;
+	background:url(h1.png) top left no-repeat scroll;
+}
+h1{
+	font-size:70px;
+	color: #DFDFDF;
+}
+#thecar{
+	background-color:#000;
+	color:#fff;
+	font-size:50px;
+	padding:0 20px;
+	border-radius:5px;
+	display:block;
+	white-space:pre-wrap;
+	display:block;
+	width:500px;
+	text-align:center;
+	margin-left:250px;
+}
+button{
+	padding:10px;
+	background-color:#d90000;
+	border:1px solid #000;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	color:#fff;
+	font-weight:bold;
+	font-size:30px;
+	margin-left:500px;
+}
+.assignedby{
+display: inline-block;
+	padding:5px;
+	-webkit-border-radius: 3px;    
+    border-radius: 3px;
+	background-color: #333333;
+	margin-bottom:5px;
+	position:fixed;
+	bottom:-5px;
+	right:10px;
+	z-index:99;
+	line-height:10px; 
+	font-size:9px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-decoration:none;	
+}
+a.assignedby, .assignedto, .brief{
+	padding-right:1%;
+	color: #FFFFFF;
+	/*text-shadow: 0px 1px 0px #555;*/
+    filter: dropshadow(color=#555, offx=1, offy=1);
+	text-transform:uppercase;
+	margin-right:15px;
+	margin-bottom:10px;
+
+}
+.assignedto{
+display: inline-block;
+	padding:5px;
+	-webkit-border-radius: 3px;    
+    border-radius: 3px;
+	background-color: #336699;
+	margin-bottom:5px;
+	position:fixed;
+	bottom:25px;
+	right:10px;
+	z-index:99;
+	line-height:10px; 
+	font-size:9px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;	
+}
+.brief{
+	width:180px;
+	display: inline-block;
+	padding:5px;
+	-webkit-border-radius: 3px;    
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.15);
+	background-color: #666666;
+	margin-bottom:5px;
+	position:fixed;
+	bottom:22px;
+	right:10px;
+	z-index:99;
+	line-height:12px; 
+	font-size:11px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	
+}
+code,pre {
+    padding: 0 3px 2px;
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+    font-size: 12px;
+    color: #333;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+code {
+    padding: 2px 4px;
+    color: #d14;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+}
+
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 20px;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.15);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+pre.prettyprint {
+    margin-bottom: 20px;
+}
+.andy, .maha {text-decoration:none; font-size:x-small; background-color: #333333; color: #FFF; padding-right:4px; padding-left:4px;}
+.andy:hover{ background-color:#000; color: #FFCC00; padding-right:4px;}
+/*.maha {text-decoration:none; font-size:x-small; background-color: #A7A7A7; color:#000; padding-right:1px;}*/
+.maha:hover{ background-color:#666666; color: #FFCC00; padding-right:4px;}
+.om{
+	position:relative;
+	width:20px;
+	height:20px;
+	border-radius:20px;
+	display:run-in;
+	box-sizing:border-box;
+	background-color:#FF3300;
+	border:solid 5px #000;
+	margin-right:-15px;
+	margin-top:-15px;
+	float:right;
+	text-align:center;
+	font-size:10px;
+	line-height:10px;
+	padding:2px;
+	}
+.lodhighL,.lodhighM {
+	background-color:#FFFF99;
+	width:100%;
+	display:block;
+	z-index:20;
+	position:fixed;	
+}
+.lodhighL{
+	height:20px;
+	margin-top:-20px;
+}
+.lodhighM{
+	height:220px;
+	margin-top:-220px;
+}
+</style>
+</head>
+
+<body>
+<h1 id="wow" class="animated fadeInRight" style=" text-outline:#666666;">Which is Your Next Car?</h1>
+<p id="thecar"></p>
+<button type="button" onClick="showcar()" class="animated fadeInLeft"><span id="amazeme">Find Out</span></button>
+<br><br><br>
+<!--The Code Snippet Section-->
+	<section class="prettyprint">
+			<h3>Loading "car.js" from <code><span>&lt;script&gt;&lt;/script&gt;</span></code>  in <code>&lt;head&gt; </code> of the document</h3>
+            <h6>syntax</h6>
+	<pre><span>&lt;script</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">text/javascript</span><span class="delimiter">"</span></span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">"</span><span class="content">car.js</span><span class="delimiter">"</span></span><span class="tag">&gt;</span><span>&lt;/script&gt;<div class="lodhighL animated fadeOut"></div></span></pre>
+
+	</section>
+
+<section>
+	<article>
+		
+			<h3>The Script Code</h3>
+			<pre class="prettyprint">
+function showcar()
+{
+	var myCar = "Alto K10";
+		<code>document.getElementById('thecar').innerHTML=myCar;</code>
+	var isSmooth = "WOW! This is Awesome!"
+		document.getElementById('amazeme').innerHTML=isSmooth;
+	var hdr = "It is Definitely";
+		document.getElementById('wow').innerHTML=hdr;
+
+}
+            <div class="lodhighM animated fadeOut"></div>
+			</pre>	
+	</article>
+</section>
+<section>
+	<article>
+		
+			<h3>The HTML Code</h3>
+			<pre class="prettyprint">
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="comment"></span><span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta</span> <span class="attribute-name">charset</span>=<span class="string"><span class="delimiter">"</span><span class="content">utf-8</span><span class="delimiter">"</span></span> <span class="tag">/&gt;</span>
+  <span class="tag">&lt;meta</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">"</span><span class="content">viewport</span><span class="delimiter">"</span></span> <span class="attribute-name">content</span>=<span class="string"><span class="delimiter">"</span><span class="content">width=device-width</span><span class="delimiter">"</span></span> <span class="tag">/&gt;</span>
+
+  &lt;title&gt;My Next Car&lt;/title&gt;<br><span class="tag"></span>
+  <span class="tag">&lt;script</span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">"</span><span class="content">car.js</span><span class="delimiter">"</span></span><span class="tag">&gt;</span><span class="tag">&lt;/script&gt;</span>
+	&lt;style&gt;
+/*--some style in here--*/
+	&lt;/style&gt;
+
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>&lt;h1 id=&quot;wow&quot;&gt;Which is Your Next Car?&lt;/h1&gt;<br>&lt;p <code>id=&quot;thecar&quot;</code>&gt;&lt;/p&gt;<br>&lt;button type=&quot;button&quot; onClick=&quot;<code>showcar()</code>&quot;&gt;
+&lt;span id=&quot;amazeme&quot;&gt;Find Out&lt;/span&gt;
+&lt;/button&gt;
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+			</pre>	
+	</article>
+</section>
+<footer>
+<p class="brief animated fadeInUp"><span class="om"></span>Recieved this bit of brilliant code from <span class="maha">Mr. Anand Mahajan!</span> (My C++ Guru!). Task he assigned to me was, loading the js file from head :) and Find the car! lets check it now! Learning bit by bit<br><a class="andy" href="http://anandvip.com">Vipul Anand</a></p>
+
+<a class="assignedby animated fadeInLeftBig">Mahajan Computers</a>
+<a class="assignedto animated fadeInDownBig">April 18, 2013</a>
+</footer>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40306334-1', 'anandvip.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
