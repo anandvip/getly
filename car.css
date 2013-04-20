@@ -382,3 +382,25 @@
 	-o-animation-name: fadeOutUp;
 	animation-name: fadeOutUp;
 }
+/*back to top style*/
+.scrolltop {
+	text-decoration:none;
+	position:fixed;
+	top:50%;
+	right:5px;
+	overflow:hidden;
+	width:40px;
+	height:40px;
+	border:none;
+	text-indent:-999px;
+	background:url(to-top-button.png) no-repeat left top;
+	z-index:99999;	
+	}
+
+.scrolltop:hover {
+	background:url(to-top-button.png) no-repeat left -40px;
+	width:40px;
+	height:40px;
+	display:block;
+	overflow:hidden;
+	float:left;}
