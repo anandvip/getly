@@ -19,6 +19,6 @@ https://github.com/jordansinger/Hook.js
 2. **Back to top fade in after scrolling 100px** http://anandvip.com/mahajancomps/to-top-button.png
 
 
-[![picture alt](http://placehold.it/700x80/900/fff&text=Vipul%20Anand)](http://anandvip.blogspot.com)
+[![picture alt](http://placehold.it/700x80/900/fff&text=Vipul%20Anand)](http://anandvip.com)
 
 
