@@ -1,9 +1,9 @@
 // JavaScript Document
 function showcar()
 {
-  var myCar = "Alto K10";
+  var myCar = "Brezza";
 		document.getElementById('thecar').innerHTML=myCar;
-	var isSmooth = "WOW! This is Awesome!"
+	var isSmooth = "Lesson Learnt";
 		document.getElementById('amazeme').innerHTML=isSmooth;
 	var hdr = "It is Definitely";
 		document.getElementById('wow').innerHTML=hdr;
